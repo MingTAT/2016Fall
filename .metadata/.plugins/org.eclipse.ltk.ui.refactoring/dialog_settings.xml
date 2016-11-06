@@ -6,7 +6,11 @@
 	</section>
 	<section name="RefactoringStatusDialog">
 		<item value="818" key="DIALOG_WIDTH"/>
-		<item value="1|Segoe UI|7.8|0|WINDOWS|1|-13|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-		<item value="502" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="511" key="DIALOG_HEIGHT"/>
+	</section>
+	<section name="InferTypeArguments">
+		<item value="true" key="leaveUnconstrainedRaw"/>
+		<item value="true" key="assumeCloneReturnsSameType"/>
 	</section>
 </section>
