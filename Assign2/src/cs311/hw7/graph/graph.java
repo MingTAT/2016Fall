@@ -1,8 +1,8 @@
-/**
- * 
- */
 package cs311.hw7.graph;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import cs311.hw7.graph.IGraph.DuplicateEdgeException;
@@ -18,7 +18,15 @@ import cs311.hw7.graph.IGraph.Vertex;
  */
 public class graph<V,E> implements IGraph<V,E>{
 
+	private Map<V, List<Edge<V>>> adjacencyList; //[vertices]-> [edge]
 	
+	
+	
+	public graph(){
+		adjacencyList = new HashMap<V, List<Edge<V>>>();
+		
+		
+	}
 	 /**
      * Set the graph to be a directed graph.  Edge (x, y) is different than edge (y, x)
      */
@@ -55,7 +63,7 @@ public class graph<V,E> implements IGraph<V,E>{
      * @throws cs311.hw6.graph.IGraph.DuplicateVertexException 
      */
     public void addVertex( String vertexName ) throws DuplicateVertexException{
-    	
+    	adjacencyList.put(vertexName, new ArrayList<Edge<V>>());
     }
     
     
@@ -87,6 +95,7 @@ public class graph<V,E> implements IGraph<V,E>{
      * @throws cs311.hw6.graph.IGraph.NoSuchVertexException 
      */
     public void addEdge( String vertex1, String vertex2 ) throws DuplicateEdgeException, NoSuchVertexException{
+    	Edge<V> edge = new Edge<V>(vertex1, vertex2);
     	
     }
     
@@ -193,7 +202,7 @@ public class graph<V,E> implements IGraph<V,E>{
      * @return Encapsulated edge.
      */
     public Edge<E> getEdge( String vertexName1, String vertexName2){
-    	
+    	return this.getEdge.get(vertexName1, vertexName2);
     }
     
     /**

@@ -7,7 +7,7 @@ package cs311.hw7.graphalgorithms;
  * @author Ming
  *
  */
-public class IWeight {
+public interface IWeight {
 
 	public double getWeight();
 }
